@@ -157,7 +157,11 @@ ul {
 
 #preloader {
   overflow: hidden;
-  background-image: linear-gradient(135deg, var(--light-blue) 0%, #f4990d 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--light-blue) 0%,
+    var(--light-blue) 100%
+  );
   left: 0;
   right: 0;
   top: 0;
