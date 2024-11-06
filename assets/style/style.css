@@ -661,12 +661,17 @@ nav {
 }
 .about-text-header h2 {
   font-family: var(--font-montserrat);
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 800;
   position: relative;
   display: inline-block;
   margin-bottom: 6rem;
   cursor: default;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--dirty-white);
+  text-shadow: -1px -1px 0 var(--dark-gray), 1px -1px 0 var(--dark-gray),
+    -1px 1px 0 var(--dark-gray), 1px 1px 0 var(--dark-gray);
 }
 
 .about-text-header h2::before,
@@ -757,12 +762,21 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateX(30px); /* Slide in from the left */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 0.4s;
 }
 .about-right img {
   width: 80%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+.about-right.active {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
 }
 
 /* *** END ABOUT *** */

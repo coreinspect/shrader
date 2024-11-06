@@ -127,7 +127,8 @@
 })(jQuery);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".sub-about-text");
+  // Select both .sub-about-text and .about-right elements
+  const elements = document.querySelectorAll(".sub-about-text, .about-right");
 
   function handleScroll() {
     elements.forEach((element) => {
@@ -138,5 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Run the handleScroll function on scroll
   window.addEventListener("scroll", handleScroll);
+
+  // Run the handleScroll function immediately to check if elements are already in view
+  handleScroll();
 });
