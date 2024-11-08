@@ -18,6 +18,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -35,7 +39,7 @@
       </div>
 
       <!-- ***** Headers Start ***** -->
-      <header>
+      <header id="main">
         <nav class="header-area header-sticky">
           <div class="container">
             <div class="row">
@@ -53,8 +57,8 @@
                   <ul class="nav">
                     <li><a href="#top" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#work-process">Work Process</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                   </ul>
                   <a class="menu-trigger">
                     <span>Menu</span>
@@ -73,7 +77,28 @@
             engage. We bring your brand's vision to life online—creating digital
             experiences that make a lasting impact.
           </p>
-          <div class="header-button"><a href="#">Learn More</a></div>
+          <button class="animated-button">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">Learn More</span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
         </div>
       </header>
 
@@ -130,8 +155,10 @@
 
     <!-- ***** About  ***** -->
     <section class="about-container" id="about">
-      <div class="about-text-header">
-        <h2>Who We Are</h2>
+      <div class="text-header-wrapper">
+        <div class="text-header">
+          <h2>Who we are</h2>
+        </div>
       </div>
       <div class="about-wrapper">
         <div class="about-left">
@@ -162,6 +189,131 @@
         </div>
       </div>
     </section>
+
+    <!-- ***** Jayson  ***** -->
+    <section class="jayson">
+      <div class="jayson">
+        <div class="jayson-wrapper">
+          <div class="jayson-left">
+            <img src="assets/images/teams/overlord.png" alt="Jayson" />
+          </div>
+          <div class="jayson-right">
+            <h2>Overlord</h2>
+            <p>
+              Founder, President, CEO, supreme OVERLORD of life and death,
+              greatest of the supreme beings, most powerful magic caster in the
+              annals of time, greatest and most benevolent of the undead,
+              immortal god king, ruler of the world, master of the 4 and 5
+              elements, embodiment of justice, and he who sits on the throne of
+              Kings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** The Team - Carousel  ***** -->
+    <div class="text-header-wrapper" id="team">
+      <div class="text-header">
+        <h2>Under the Hood</h2>
+      </div>
+    </div>
+
+    <section class="body-wrapper-slider">
+      <div class="vertical-text">
+        <span> M </span>
+        <span> A </span>
+        <span> E </span>
+        <span> T </span>
+      </div>
+      <div class="wrapper-custom-slider">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="unique-carousel" id="carouselContainer"></ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <!-- ***** Contact  ***** -->
+
+    <div class="container-contact" id="contact">
+      <span class="big-circle"></span>
+
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Ready to build your website? Contact us today! Our experts are here
+            to guide you every step of the way, from planning to launch. Reach
+            out now to start bringing your vision to life!
+          </p>
+
+          <div class="info">
+            <!-- <div class="information">
+              <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
+              <p>Davao, Philippines</p>
+            </div> -->
+            <div class="information">
+              <i class="fas fa-envelope"></i> &nbsp &nbsp
+              <p>support@shradertechnologies.com</p>
+            </div>
+            <!-- <div class="information">
+              <i class="fas fa-phone"></i>&nbsp&nbsp
+              <p>123-456-789</p>
+            </div> -->
+          </div>
+
+          <!-- <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form id="contact-form" action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" required />
+              <label for="">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" required />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" required></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+            <p id="success-message">Message sent successfully!</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/soon.min.js.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
